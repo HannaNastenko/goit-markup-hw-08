@@ -1,0 +1,40 @@
+.logo {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.03em;
+  text-decoration: inherit;
+
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  &__text {
+    color: var(--accent-color);
+  }
+}
+
+.header__logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: var(--text-color);
+  margin-right: auto;
+
+  @include tablet {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 87px;
+  }
+
+  @include desktop {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 92px;
+  }
+}
+
+.footer__logo {
+  color: var(--title-white-color);
+}

@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-secondary-color);
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-white-color);
+  }
+}
+
+.footer__container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+
+
+@media screen and (max-width: 767px){
+flex-direction: column;
+}
+
+@include tablet {
+    align-items: baseline;
+}
+
+@include desktop {
+  justify-content: space-between;
+}
+}
+

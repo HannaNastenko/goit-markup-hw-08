@@ -1,0 +1,31 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/vis-hidden";
+@import "./utils/section";
+@import "./utils/section-title";
+@import "./utils/main-btn";
+@import "./utils/footer";
+@import "./utils/container";
+
+@import "./base/reset";
+
+
+@import "./components/logo";
+@import "./components/modal";
+
+
+@import "./layout/main-page/page-header";
+@import "./layout/main-page/hero";
+@import "./layout/main-page/benefits";
+@import "./layout/main-page/work";
+@import "./layout/main-page/team";
+@import "./layout/main-page/clients";
+
+@import "./layout/footer/contacts";
+@import "./layout/footer/soc-list";
+@import "./layout/footer/subscribe";
+
+@import "./layout/portfolio-page/btn-filter";
+@import "./layout/portfolio-page/card-set";
+
+
