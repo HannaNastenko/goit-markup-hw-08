@@ -17,7 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./dist/css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>Студія</title>
   </head>
   <body>
@@ -81,16 +81,16 @@
             data-menu-close
           >
             <svg class="icon-cross" width="40px" height="40px">
-              <use
-                href="./images/icons.svg#icon-cross"
-              ></use>
+              <use href="./images/icons.svg#icon-cross"></use>
             </svg>
           </button>
           <div class="mobile-menu__container">
             <div class="mobile-nav">
               <ul class="nav-list list">
                 <li class="nav-list__item">
-                  <a class="nav-list__link nav-list__link--active" href="./">Студія</a>
+                  <a class="nav-list__link nav-list__link--active" href="./"
+                    >Студія</a
+                  >
                 </li>
                 <li class="nav-list__item">
                   <a class="nav-list__link" href="./portfolio.html"
@@ -211,6 +211,7 @@
             <li class="work-list__item">
               <div class="work-list__thumb">
                 <img
+                  srcset="./images/work1@1x.jpg 1x, ./images/work1@2x.jpg 2x"
                   src="./images/box1.jpg"
                   width="370"
                   height="294"
@@ -222,6 +223,7 @@
             <li class="work-list__item">
               <div class="work-list__thumb">
                 <img
+                  srcset="./images/work2@1x.jpg 1x, ./images/work2@2x.jpg 2x"
                   src="./images/box2.jpg"
                   width="370"
                   height="294"
@@ -233,6 +235,7 @@
             <li class="work-list__item">
               <div class="work-list__thumb">
                 <img
+                  srcset="./images/work3@1x.jpg 1x, ./images/work3@2x.jpg 2x"
                   src="./images/box3.jpg"
                   width="370"
                   height="294"
@@ -250,13 +253,36 @@
           <h2 class="team-title title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list-item">
-              <img
-                class="img"
-                src="./images/demianenko.jpg"
-                width="270"
-                height="260"
-                alt="Ігор Дем'яненко"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/member-desk1@1x.jpg 1x,
+                    ./images/member-desk1@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/member-tab1@1x.jpg 1x,
+                    ./images/member-tab1@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/member-mob1@1.jpg  1x,
+                    ./images/member-mob1@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="img"
+                  src="./images/member-mob1@1.jpg"
+                  width="450"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
+
               <div class="member-cont">
                 <h3 class="member-title">Ігор Дем'яненко</h3>
                 <p lang="en" class="team-list-text">Product Designer</p>
@@ -293,13 +319,36 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img
-                class="img"
-                src="./images/repina.jpg"
-                width="270"
-                height="260"
-                alt="Ольга Рєпіна"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/member-desk2@1x.jpg 1x,
+                    ./images/member-desk2@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/member-tab2@1x.jpg 1x,
+                    ./images/member-tab2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/member-mob2@1.jpg  1x,
+                    ./images/member-mob2@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="img"
+                  src="./images/member-mob2@1.jpg"
+                  width="450"
+                  alt="Ольга Рєпіна"
+                />
+              </picture>
+
               <div class="member-cont">
                 <h3 class="member-title">Ольга Рєпіна</h3>
                 <p lang="en" class="team-list-text">Frontend Developer</p>
@@ -336,13 +385,36 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img
-                class="img"
-                src="./images/tarasow.jpg"
-                width="270"
-                height="260"
-                alt="Микола Тарасов"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/member-desk3@1x.jpg 1x,
+                    ./images/member-desk3@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/member-tab3@1x.jpg 1x,
+                    ./images/member-tab3@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/member-mob3@1.jpg  1x,
+                    ./images/member-mob3@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="img"
+                  src="./images/member-mob3@1.jpg"
+                  width="450"
+                  alt="Микола Тарасов"
+                />
+              </picture>
+
               <div class="member-cont">
                 <h3 class="member-title">Микола Тарасов</h3>
                 <p lang="en" class="team-list-text">Marketing</p>
@@ -379,13 +451,36 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/member-desk4@1x.jpg 1x,
+                    ./images/member-desk4@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/member-tab4@1x.jpg 1x,
+                    ./images/member-tab4@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/member-mob4@1.jpg  1x,
+                    ./images/member-mob4@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
                 class="img"
-                src="./images/jermakow.jpg"
-                width="270"
-                height="260"
+                src="./images/member-mob4@1.jpg "
+                width="450"
                 alt="Михайло Єрмаков"
               />
+              </picture>
+              
               <div class="member-cont">
                 <h3 class="member-title">Михайло Єрмаков</h3>
                 <p lang="en" class="team-list-text">UI Designer</p>
