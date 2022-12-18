@@ -215,12 +215,12 @@ body {
 
 .modal {
   position: fixed;
-  top: 85px;
-  left: 15px;
-  min-width: 355px;
-  width: 100%;
-  min-height: 609px;
-  padding: 47px 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  max-width: 450px;
+  width: calc(100% - 30px);
+  padding: 40px;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -228,24 +228,13 @@ body {
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic-bezier);
 }
-@media screen and (min-width: 480px) {
-  .modal {
-    max-width: 450px;
-  }
-}
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
-    top: 208px;
-    left: 159px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
     min-width: 528px;
     min-height: 581px;
     padding: 40px 41px;
@@ -304,13 +293,8 @@ body {
   align-items: center;
 }
 .form-field {
-  min-width: 370px;
+  width: 100%;
   margin-bottom: 10px;
-}
-@media screen and (min-width: 1200px) {
-  .form-field {
-    width: 448px;
-  }
 }
 .form-field:nth-of-type(4n) {
   margin-bottom: 20px;
@@ -391,6 +375,7 @@ body {
 
 .policy-text,
 .policy-link {
+  display: inline-block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -415,11 +400,16 @@ body {
   position: absolute;
   display: inline-block;
   content: "";
-  bottom: 3px;
+  bottom: 4px;
   left: 0;
   width: 100%;
   height: 0.5px;
   background-color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .policy-link::after {
+    bottom: 3px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .policy-link::after {
@@ -822,10 +812,11 @@ body {
   }
 }
 
-.benefits-list__item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .benefits-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
-
 .benefits-list__title {
   margin-bottom: 10px;
   font-size: 14px;
